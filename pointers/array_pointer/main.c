@@ -2,6 +2,29 @@
 #include <stdlib.h>
 
 int main(){
+    int iarr[] = {12, 34, 56, 78, 90, 21, 43};
+    int *ptr1 = NULL, *ptr2 = NULL;
+
+    ptr1 = iarr;
+    ptr2 = &iarr[4];
+
+    ptr1+= 2; // 2 elem in arr
+    ptr2++; // 5 elem in arr
+
+    printf("%d\n", *ptr1);
+    printf("%d\n", *ptr2);
+    printf("%td\n", ptr2 - ptr1); // 5 - 2 = 3 elem in arr
+    printf("%d\n", (ptr1 < ptr2)); // 1 (true) 2 < 5
+    printf("%d\n", ((*ptr1) < (*ptr2))); // 0 (false) 56 < 21 
+    printf("%d\n", ((*ptr1) > (*ptr2))); // 1 (true) 56 > 21
+    printf("%d\n", *ptr1);
+    printf("%d\n", ((*ptr1--) > (*ptr2))); // 1 (true) 34 > 21
+    printf("%d\n", *ptr1);
+    printf("%d\n", ((*--ptr1) > (*ptr2))); // 0 (false) 12 > 21
+    printf("%d\n", *ptr1);
+    printf("%d\n", ((*ptr1--) > (*ptr2))); // 0 (false) 0 > 21
+    printf("%d\n", *ptr1);
+
     char *german[] = {
         "eins","zwei","drei","vier","fünf",
         "sechs","sieben","acht","neun","zehn"

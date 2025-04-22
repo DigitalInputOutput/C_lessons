@@ -25,6 +25,16 @@ int main(){
     int *iptr = NULL; // Zeiger mit NULL initialisieren
     int ival1 = 0, ival2 = 0;
 
+    int *ptr = NULL;
+    int ival; 
+    ptr = &ival;
+
+    ival = 1234567;
+    *ptr = 9876421;
+
+    printf("%d\n", ival);
+    printf("%d\n", *ptr);
+
     // Initializirung: Zeiger erhält Adresse von ival1
     iptr = &ival1;
 
